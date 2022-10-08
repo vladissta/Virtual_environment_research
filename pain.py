@@ -37,6 +37,11 @@ alignments = max(pairwise2.align.globalds("ATATCTCGATCGCTACGTC", "CTAGCTCGCTGCTC
                                           matlist.blosum62, -10, -0.5), key=lambda x: x.score)
 
 some_string = "abc dfg"
+match some_string.split():
+    case var, "dfg":
+        print("It works")
+    case _:
+        print("Not working")
 
 alignments
 scanpy.tl.leiden
